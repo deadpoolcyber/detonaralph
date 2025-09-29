@@ -1,57 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!--Configurações-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CSS-->
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/main.css">
-    <!--Fontes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Configuração do tipo de documento e idioma -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, suportando acentuação -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala para dispositivos móveis -->
+
+    <!-- Importação de arquivos CSS externos -->
+    <link rel="stylesheet" href="./src/styles/reset.css"> <!-- Reset de estilos para padronizar visual nos navegadores -->
+    <link rel="stylesheet" href="./src/styles/main.css">  <!-- Arquivo principal de estilos do jogo -->
+
+    <!-- Importação de fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Melhora o carregamento da fonte -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <title>Detona Ralph</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fonte estilo retrô usada no jogo -->
+
+    <title>Detona Ralph</title> <!-- Título que aparece na aba do navegador -->
 </head>
 
 <body>
-
+    <!-- Container principal do jogo -->
     <div class="container">
+
+        <!-- Menu superior com informações do jogo -->
         <div class="menu">
+
+            <!-- Seção que mostra o tempo restante -->
             <div class="menu-time">
-                <h2 style="color: red;">Time Left</h2>
-                <h2 id="time-left" >0</h2>
+                <h2 style="color: red;">Time Left</h2> <!-- Texto fixo indicando "tempo restante" -->
+                <h2 id="time-left">0</h2> <!-- Valor do tempo restante (alterado dinamicamente pelo JavaScript) -->
             </div>
+
+            <!-- Seção que mostra a pontuação do jogador -->
             <div class="menu-score">
-                <h2 style="color: red;">Your Score</h2>
-                <h2 id="score">0</h2>
+                <h2 style="color: red;">Your Score</h2> <!-- Texto fixo indicando "pontuação" -->
+                <h2 id="score">0</h2> <!-- Valor da pontuação (atualizado em tempo real pelo JavaScript) -->
             </div>
-            <div class="menu-lives"></div>
-            <img src="./src/img/player.png" alt="Nome do Jogador" height="60px"/>
-            <h2><span>X</span><span id="lives">3</span></h2>
+
+            <!-- Seção que mostra as vidas do jogador -->
+            <div class="menu-lives"></div> <!-- Espaço reservado (pode ser usado para exibir corações ou ícones de vida) -->
+            <img src="./src/img/player.png" alt="Nome do Jogador" height="60px"/> <!-- Ícone ou avatar do jogador -->
+            <h2>
+                <span>X</span> <!-- Letra "X" representando multiplicação -->
+                <span id="lives">3</span> <!-- Número de vidas restantes (controlado pelo JavaScript) -->
+            </h2>
         </div>
 
+        <!-- Painel principal do jogo, onde aparecem os inimigos -->
         <div class="panel">
+
+            <!-- Primeira linha de quadrados (3 posições) -->
             <div class="panel-row">
-                <div class="square" id="1"></div>
+                <div class="square" id="1"></div> <!-- Cada "square" é um espaço onde o inimigo pode aparecer -->
                 <div class="square" id="2"></div>
                 <div class="square" id="3"></div>
             </div>
 
+            <!-- Segunda linha de quadrados -->
             <div class="panel-row">
                 <div class="square" id="4"></div>
                 <div class="square" id="5"></div>
                 <div class="square" id="6"></div>
             </div>            
             
+            <!-- Terceira linha de quadrados -->
             <div class="panel-row">
                 <div class="square" id="7"></div>
                 <div class="square" id="8"></div>
                 <div class="square" id="9"></div>
             </div>
-    </div>
+        </div> <!-- Fim do painel -->
+    </div> <!-- Fim do container -->
 
-    <!--JavaScrypt-->
+    <!-- Importação do script principal do jogo -->
+    <!-- "defer" garante que o JavaScript só vai rodar depois do carregamento do HTML -->
     <script defer src="./src/scripts/engine.js"></script>
 </body>
 </html>
