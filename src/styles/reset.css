@@ -1,6 +1,16 @@
+/* 
+   O seletor * significa "todos os elementos" da página.
+   Ou seja, esse estilo será aplicado globalmente em todo o HTML.
+*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Press Start 2P", cursive;
+    margin: 0; /* Remove todas as margens externas padrão dos elementos */
+    padding: 0; /* Remove todos os espaçamentos internos padrão dos elementos */
+    box-sizing: border-box; 
+    /* Faz com que largura e altura dos elementos 
+       considerem também o padding e a borda.
+       Isso facilita o controle do layout, evitando cálculos complicados. */
+    
+    font-family: "Press Start 2P", cursive; 
+    /* Define a fonte principal do jogo como a "Press Start 2P" (retrô, estilo arcade).
+       Caso ela não carregue, usa a fonte genérica cursiva. */
 }
