@@ -1,48 +1,69 @@
+/* ======================== */
+/* Container principal do jogo */
+/* ======================== */
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url("../img/wall.png");
+    display: flex;              /* Usa flexbox para organizar os elementos internos */
+    flex-direction: column;     /* Os elementos internos (menu e painel) ficam em coluna, um embaixo do outro */
+    height: 100vh;              /* Ocupa 100% da altura visível da tela */
+    background-image: url("../img/wall.png"); /* Define a imagem de fundo (parede do jogo) */
 }
 
-.menu{
-    display: flex;
-    justify-content:  space-evenly;
-    align-items: center;
+/* ======================== */
+/* Barra de menu superior */
+/* ======================== */
+.menu {
+    display: flex;                  /* Usa flexbox para alinhar os elementos dentro do menu */
+    justify-content: space-evenly;  /* Distribui os itens com espaçamento igual entre eles */
+    align-items: center;            /* Centraliza verticalmente os itens dentro do menu */
 
-    height: 90px;
-    width: 100%;
-    background-color: #000000;
-    color: #FFFFFF;
-    border-bottom: 5px solid #ffd700;
+    height: 90px;                   /* Altura fixa do menu */
+    width: 100%;                    /* Ocupa toda a largura da tela */
+    background-color: #000000;      /* Fundo preto */
+    color: #FFFFFF;                 /* Texto branco */
+    border-bottom: 5px solid #ffd700; /* Linha inferior dourada, estilo retrô */
 }
 
-.panel{
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+/* ======================== */
+/* Painel de jogo (onde ficam os quadrados) */
+/* ======================== */
+.panel {
+    margin-top: 1rem;           /* Dá um espaçamento entre o menu e o painel */
+    display: flex;              /* Usa flexbox */
+    align-items: center;        /* Centraliza os quadrados verticalmente */
+    justify-content: center;    /* Centraliza os quadrados horizontalmente */
 }
 
-.square{
-    height: 150px;
-    width: 150px;
-    border: 1px solid black;
-    background-color: #67f583;
+/* ======================== */
+/* Quadrados do painel */
+/* ======================== */
+.square {
+    height: 150px;              /* Altura de cada quadrado */
+    width: 150px;               /* Largura de cada quadrado */
+    border: 1px solid black;    /* Borda preta em volta */
+    background-color: #67f583;  /* Cor verde clara padrão (quando não tem inimigo) */
 }
 
-.enemy{
-    background-image: url("../img/ralph.png");
-    background-size: cover;
+/* ======================== */
+/* Classe aplicada ao inimigo (Ralph) */
+/* ======================== */
+.enemy {
+    background-image: url("../img/ralph.png"); /* Coloca a imagem do inimigo */
+    background-size: cover;                    /* Faz a imagem ocupar todo o quadrado */
 }
 
-.menu-lives{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ======================== */
+/* Área de vidas no menu */
+/* ======================== */
+.menu-lives {
+    display: flex;              /* Flexbox para organizar os elementos */
+    align-items: center;        /* Centraliza verticalmente */
+    justify-content: center;    /* Centraliza horizontalmente */
 }
+
+/* ======================== */
+/* Ajustes de espaçamento nos valores do tempo e score */
+/* ======================== */
 .menu-time h2:nth-child(2), 
-.menu-score h2:nth-child(2){
-    margin-top: 10px;   
+.menu-score h2:nth-child(2) {
+    margin-top: 10px;           /* Adiciona espaço acima do número exibido */
 }
